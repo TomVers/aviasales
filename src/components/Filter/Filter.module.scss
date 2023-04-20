@@ -1,0 +1,36 @@
+.filterUl {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+  height: 50px;
+  justify-content: space-around;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+}
+.filterLi {
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #dfe5ec;
+  width: 168px;
+}
+.filterLi:last-child {
+  border-right: none;
+}
+.filterLi:hover {
+  background-color: #f1fcff;
+}
+.filterLabel {
+}
+.filterInput {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+}

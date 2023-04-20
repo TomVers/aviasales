@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff)
+    format('woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'),
+    url(https://fonts.gstatic.com/s/opensans/v13/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff)
+      format('woff');
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+$clr1: #4a4a4a;
+$clr2: #f3f7fa;
+
+body {
+  background-color: $clr2;
+}
+.main {
+  font-family: 'Open Sans', sans-serif;
+  color: $clr1;
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+  margin: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 1.5s ease-in-out;
+}
+.logo:hover {
+  transform: scale(150%);
+}

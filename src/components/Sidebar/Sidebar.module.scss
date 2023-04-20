@@ -1,0 +1,64 @@
+$clr1: #2196f3;
+$clr2: #4a4a4a;
+$clr3: #ffffff;
+
+.sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-right: 20px;
+  height: 252px;
+  min-width: 232px;
+  font-size: 13px;
+  background-color: $clr3;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  &__title {
+    text-transform: uppercase;
+    line-height: 12px;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  &__checkboxes {
+    list-style: none;
+    padding: 0;
+    font-weight: 300;
+    color: $clr2;
+    line-height: 20px;
+  }
+}
+
+.check {
+  padding: 10px;
+  padding-left: 20px;
+}
+.check:hover {
+  background-color: #f1fcff;
+}
+.checkboxLabel {
+  cursor: pointer;
+  margin-left: 2em;
+  display: flex;
+  align-items: center;
+}
+.checkboxInput {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.checkboxSpan {
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  border: 1px solid $clr1;
+  border-radius: 2px;
+  margin-left: -2em;
+}
+.checkboxInput:checked + .checkboxSpan {
+  background: url(../../assets/check.svg) no-repeat center;
+}
+.checkboxInput:focus + .checkboxSpan {
+  border: 2px solid $clr1;
+}
