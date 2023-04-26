@@ -10,7 +10,7 @@ export const Filter = () => {
     return (
       <li key={name} className={styles.filterLi}>
         <label className={styles.filterLabel}>
-          <input type="radio" className={styles.filterInput} readOnly></input>
+          <input type='radio' className={styles.filterInput} readOnly></input>
           {label}
         </label>
       </li>

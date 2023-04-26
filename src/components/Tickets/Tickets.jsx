@@ -4,7 +4,7 @@ import styles from './Tickets.module.scss'
 
 export const Tickets = () => {
   return (
-    <div className="">
+    <div className=''>
       <Ticket />
       <Ticket />
       <Ticket />

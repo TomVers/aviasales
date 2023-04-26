@@ -20,6 +20,7 @@
   padding-right: 15px;
   border-right: 1px solid #dfe5ec;
   width: 168px;
+  cursor: pointer;
 }
 .filterLi:last-child {
   border-right: none;
@@ -28,6 +29,7 @@
   background-color: #f1fcff;
 }
 .filterLabel {
+  cursor: pointer;
 }
 .filterInput {
   position: absolute;

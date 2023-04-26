@@ -1,6 +1,6 @@
-import styles from './Ticket.module.scss'
-
 import logoS7 from '../../assets/logoS7.svg'
+
+import styles from './Ticket.module.scss'
 
 export const Ticket = () => {
   return (
