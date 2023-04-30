@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const ticketsSlice = createSlice({
-  name: 'tickets',
+const priceFilterSlice = createSlice({
+  name: 'price',
   initialState: {
     panel: [
       { label: 'Без пересадок', id: 1, isChecked: true },
@@ -23,6 +23,6 @@ const ticketsSlice = createSlice({
   },
 })
 
-export const { checkAll, toggleCheck } = ticketsSlice.actions
+export const { checkAll, toggleCheck } = priceFilterSlice.actions
 
-export default ticketsSlice.reducer
+export default priceFilterSlice.reducer

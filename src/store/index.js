@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import ticketsSlice from './ticketsSlice'
+import priceFilterSlice from './priceFilterSlice'
+import ticketsListSlice from './ticketsListSlice'
 
 export default configureStore({
   reducer: {
-    tickets: ticketsSlice,
+    priceFilterSlice,
+    ticketsListSlice,
   },
 })

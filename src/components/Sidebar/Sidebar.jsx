@@ -1,14 +1,14 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect, useState } from 'react'
 
-import { checkAll, toggleCheck } from '../../store/ticketsSlice'
+import { checkAll, toggleCheck } from '../../store/priceFilterSlice'
 
 import styles from './Sidebar.module.scss'
 
 export const Sidebar = () => {
   const [active, setActive] = useState(true)
   const dispatch = useDispatch()
-  const checks = useSelector((state) => state.tickets.panel)
+  const checks = useSelector((state) => state.priceFilterSlice.panel)
   const checkElem = (id) => {
     dispatch(toggleCheck(id))
   }

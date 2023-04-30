@@ -21,9 +21,9 @@ $clr3: #ffffff;
     padding-bottom: 10px;
   }
 }
-
 .check:hover {
   background-color: #f1fcff;
+  transition: 0.3s linear;
 }
 .checkboxLabel {
   cursor: pointer;
