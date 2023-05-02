@@ -1,38 +1,42 @@
-.filterUl {
+.filters {
   display: flex;
-  flex-wrap: nowrap;
-  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
   height: 50px;
   justify-content: space-around;
-  border: 1px solid #dfe5ec;
   border-radius: 5px;
+  border: 1px solid #dfe5ec;
+  margin-bottom: 20px;
 }
-.filterLi {
+.filterItem {
+  background-color: #ffffff;
   text-transform: uppercase;
   font-style: normal;
   font-size: 12px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0.5px;
   padding-left: 15px;
   padding-right: 15px;
-  border-right: 1px solid #dfe5ec;
   width: 168px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.filterLi:last-child {
-  border-right: none;
+.filterItem:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid #dfe5ec;
 }
-.filterLi:hover {
-  background-color: #f1fcff;
+.filterItem:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid #dfe5ec;
 }
-.filterLabel {
-  cursor: pointer;
-}
-.filterInput {
-  position: absolute;
+.filterItemInput {
   appearance: none;
   -webkit-appearance: none;
+}
+.filterActive {
+  background-color: #2196f3;
+  color: white;
 }

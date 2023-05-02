@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getSearchId, getTickets } from '../../store/ticketsListSlice'
 import { Content } from '../Content/Content'
 import { Sidebar } from '../Sidebar/Sidebar'
-import logo from '../../assets/logo.svg'
+import earth from '../../assets/earth.svg'
+import plane from '../../assets/plane.svg'
 
 import styles from './App.module.scss'
 
@@ -15,17 +16,20 @@ const App = () => {
     dispatch(getSearchId())
   }, [])
   useEffect(() => {
-    if (searchId && status !== 'rejected' && (!stop || (stop && status === 'resolved'))) {
+    if (searchId) dispatch(getTickets(searchId))
+  }, [searchId])
+
+  useEffect(() => {
+    if ((status === 'rejected' && !stop) || (!stop && status === 'resolved'))
       dispatch(getTickets(searchId))
-    }
-  }, [searchId, status, stop])
-  // useEffect(() => {
-  //   if (!stop) dispatch(getTickets(searchId))
-  // }, [status])
+  }, [status])
   return (
     <>
       <div className={styles.logo}>
-        <img src={logo} alt='Avia' />
+        <div className={styles.plane}>
+          <img className={styles.planeImg} src={plane} alt='plane' />
+        </div>
+        <img className={styles.earth} src={earth} alt='earth' />
       </div>
       <div className={styles.main}>
         <Sidebar />

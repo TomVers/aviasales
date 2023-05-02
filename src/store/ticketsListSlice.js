@@ -30,11 +30,42 @@ const ticketsListSlice = createSlice({
     status: null,
     error: null,
     stop: false,
+    incTickets: 5,
+    activeTab: '',
   },
-  reducers: {},
+  reducers: {
+    addFiveTickets(state) {
+      state.incTickets += 5
+    },
+    sortByPrice(state) {
+      const sortTickets = [...state.tickets]
+      state.tickets = sortTickets.sort((a, b) => a.price - b.price)
+      state.activeTab = 'price'
+    },
+    sortByDuration(state) {
+      const sortTickets = [...state.tickets]
+      state.tickets = sortTickets.sort(
+        (a, b) =>
+          a.segments[0].duration +
+          a.segments[1].duration -
+          (b.segments[0].duration + b.segments[1].duration),
+      )
+      state.activeTab = 'duration'
+    },
+    sortByBoth(state) {
+      const sortTickets = [...state.tickets]
+      state.tickets = sortTickets.sort(
+        (a, b) =>
+          a.price * (a.segments[0].duration + a.segments[1].duration) -
+          b.price * (b.segments[0].duration + b.segments[1].duration),
+      )
+      state.activeTab = 'opti'
+    },
+  },
   extraReducers: {
     [getTickets.pending]: (state) => {
       state.status = 'loading'
+      state.error = null
     },
     [getTickets.fulfilled]: (state, action) => {
       state.stop = action.payload.stop
@@ -50,5 +81,7 @@ const ticketsListSlice = createSlice({
     },
   },
 })
+
+export const { addFiveTickets, sortByPrice, sortByDuration, sortByBoth } = ticketsListSlice.actions
 
 export default ticketsListSlice.reducer

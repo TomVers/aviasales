@@ -54,13 +54,52 @@ body {
   justify-content: center;
 }
 .logo {
-  width: 80px;
-  height: 80px;
-  margin: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  transition: transform 1.5s ease-in-out;
+  height: 150px;
+  position: relative;
 }
-.logo:hover {
-  transform: scale(150%);
+.plane {
+  z-index: 2;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 50%;
+}
+.planeImg {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: planeFligth 2s 3 normal cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+.earth {
+  z-index: 1;
+  position: absolute;
+  height: 98px;
+  width: 82px;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes planeFligth {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  48% {
+    transform: translate(0%, -100%);
+  }
+  50% {
+    opacity: 0;
+  }
+  52% {
+    transform: translate(-100%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
